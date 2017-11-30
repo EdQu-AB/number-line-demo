@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="edquApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>Test page</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/number-line.directive.js"></script>
+    <link href="app/styles.css" rel="stylesheet">
+  </head>
+  <body ng-init="storedValue=0;">
+    <number-line
+        min="0"
+        max="6"
+        bigstep="2"
+        smallstep="1"
+        sensitivity="0.5"
+        value="storedValue">
+    </number-line>
+    <p>
+        Value: {{ storedValue }}
+    </p>
+  </body>
+</html>
